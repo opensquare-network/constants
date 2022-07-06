@@ -4,5 +4,11 @@
   "main": "src/index.js",
   "repository": "git@github.com:opensquare-network/constants.git",
   "author": "OpenSquare <https://www.opensquare.network/>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "scripts": {
+    "release": "bumpp --tag --commit --push"
+  },
+  "devDependencies": {
+    "bumpp": "^8.2.1"
+  }
 }
