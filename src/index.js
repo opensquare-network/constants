@@ -14,6 +14,13 @@ const Chains = {
   statemint: "statemint",
   interlay: "interlay",
   crust: "crust",
+  polkadex: "polkadex",
+  moonriver: "moonriver",
+  turing: "turing",
+  crab: "crab",
+  darwinia: "darwinia",
+  ethereum: "ethereum",
+  centrifuge: "centrifuge",
 };
 
 const identityChainMap = Object.freeze({
@@ -36,6 +43,13 @@ const ChainSS58Format = Object.freeze({
   [Chains.kintsugi]: 2092,
   [Chains.westend]: 42,
   [Chains.crust]: 66,
+  [Chains.polkadex]: 88,
+  [Chains.interlay]: 2032,
+  [Chains.acala]: 10,
+  [Chains.turing]: 51,
+  [Chains.crab]: 42,
+  [Chains.darwinia]: 18,
+  [Chains.centrifuge]: 36,
 });
 
 const MOBILE_SIZE = 900;
@@ -63,10 +77,22 @@ const ChainSymbols = {
   },
 };
 
+const evmChains = [Chains.moonriver, Chains.ethereum];
+
+const nonProxyChains = [...evmChains, Chains.kintsugi, Chains.interlay];
+
+const evmChainId = Object.freeze({
+  [Chains.moonriver]: 1285,
+  [Chains.ethereum]: 1,
+});
+
 module.exports = {
   Chains,
   ChainSymbols,
   ChainSS58Format,
   MOBILE_SIZE,
   identityChainMap,
-}
+  evmChains,
+  nonProxyChains,
+  evmChainId,
+};
