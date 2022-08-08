@@ -50,8 +50,6 @@ const ChainSS58Format = Object.freeze({
   [Chains.crab]: 42,
   [Chains.darwinia]: 18,
   [Chains.centrifuge]: 36,
-  [Chains.kabocha]: 27,
-  [Chains.moonriver]: 1285,
 });
 
 const MOBILE_SIZE = 900;
